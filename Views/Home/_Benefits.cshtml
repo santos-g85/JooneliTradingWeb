@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Benefits>
+
+<section class="py-5 bg-light">
+    <div class="container px-4">
+        <div class="row align-items-center">
+            <!-- Left Column - Image -->
+            <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
+                <img src="https://images.unsplash.com/photo-1759752394755-1241472b589d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGRhc2hib2FyZCUyMGxhcHRvcHxlbnwxfHx8fDE3NjE1MjIwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                     alt="Business dashboard on laptop"
+                     class="rounded-3 shadow w-100 h-auto"
+                     style="max-height: 500px; object-fit: cover;">
+            </div>
+
+            <!-- Right Column - Content -->
+            <div class="col-lg-6 order-1 order-lg-2">
+                <div class="d-inline-block px-3 py-2 bg-purple bg-opacity-10 text-purple rounded-pill mb-4">
+                    Proven Results
+                </div>
+
+                <h2 class="display-4 fw-bold mb-4">
+                    Transform Your Business Operations
+                </h2>
+
+                <p class="lead text-muted mb-5">
+                    Join thousands of businesses that have revolutionized their inventory
+                    management and achieved remarkable results.
+                </p>
+
+                <ul class="list-unstyled">
+                    @foreach (var benefit in Model)
+                    {
+                        <li class="d-flex align-items-start mb-3">
+                            <div class="w-25 h-25 bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3 mt-1">
+                                <i class="bi bi-check-lg text-black fs-6"></i>
+                            </div>
+                            <span class="fs-5">@benefit.Title</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-purple {
+        background-color: #6f42c1 !important;
+    }
+
+    .text-purple {
+        color: #6f42c1 !important;
+    }
+
+    .bg-purple.bg-opacity-10 {
+        background-color: rgba(111, 66, 193, 0.1) !important;
+    }
+
+    .w-25 {
+        width: 25px !important;
+    }
+
+    .h-25 {
+        height: 25px !important;
+    }
+</style>

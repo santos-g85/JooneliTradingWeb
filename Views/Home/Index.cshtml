@@ -1,0 +1,9 @@
+﻿@model HomeViewModel
+
+@await Html.PartialAsync("_HeroSection")
+
+@await Html.PartialAsync("_Features", Model.Features)
+
+@await Html.PartialAsync("_Benefits", Model.Benefits)
+
+@await Html.PartialAsync("_CTA")
