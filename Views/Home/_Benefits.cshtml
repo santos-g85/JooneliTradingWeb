@@ -1,19 +1,49 @@
-﻿@model IEnumerable<Benefits>
+﻿
+@model IEnumerable<Benefits>
 
-<section class="py-5 bg-light">
+<section class="py-5 bg-warning bg-opacity-25">
     <div class="container px-4">
         <div class="row align-items-center">
-            <!-- Left Column - Image -->
+            <!-- Left Column - Feature Highlights -->
             <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
-                <img src="https://images.unsplash.com/photo-1759752394755-1241472b589d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGRhc2hib2FyZCUyMGxhcHRvcHxlbnwxfHx8fDE3NjE1MjIwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                     alt="Business dashboard on laptop"
-                     class="rounded-3 shadow w-100 h-auto"
-                     style="max-height: 500px; object-fit: cover;">
+                <div class="p-4">
+                    <h3 class="fw-bold mb-4 ">Why Businesses Trust Us</h3>
+
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-box bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3">
+                            <i class="bi bi-graph-up text-success fs-5"></i>
+                        </div>
+                        <div>
+                            <strong>Data-Driven Insights</strong>
+                            <p class="mb-0 text-muted">Make informed decisions backed by real-time analytics.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-box bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3">
+                            <i class="bi bi-lightning-charge text-warning fs-5"></i>
+                        </div>
+                        <div>
+                            <strong>Lightning-Fast Operations</strong>
+                            <p class="mb-0 text-muted">Automate your workflows to save hours every week.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="icon-box bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3">
+                            <i class="bi bi-shield-check text-primary fs-5"></i>
+                        </div>
+                        <div>
+                            <strong>Secure & Reliable</strong>
+                            <p class="mb-0 text-muted">Your data is protected with enterprise-grade security.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Right Column - Content -->
             <div class="col-lg-6 order-1 order-lg-2">
-                <div class="d-inline-block px-3 py-2 bg-purple bg-opacity-10 text-purple rounded-pill mb-4">
+                <div class="d-inline-block px-3 py-2 bg-light bg-opacity-10 text-dark rounded-pill mb-4">
                     Proven Results
                 </div>
 
@@ -22,7 +52,7 @@
                 </h2>
 
                 <p class="lead text-muted mb-5">
-                    Join thousands of businesses that have revolutionized their inventory
+                    Join hundards of businesses that have revolutionized their inventory
                     management and achieved remarkable results.
                 </p>
 
@@ -55,6 +85,11 @@
         background-color: rgba(111, 66, 193, 0.1) !important;
     }
 
+    .icon-box {
+        width: 40px;
+        height: 40px;
+    }
+
     .w-25 {
         width: 25px !important;
     }
@@ -62,4 +97,5 @@
     .h-25 {
         height: 25px !important;
     }
+
 </style>

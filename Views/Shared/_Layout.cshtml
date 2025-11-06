@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] Jooneli Trading - Complete inventory management solution for modern businesses</title>
+
+    @RenderSection("Styles", required: false)
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/JooneliTrading.styles.css" asp-append-version="true" />
@@ -35,72 +38,24 @@
     <meta name="twitter:description" content="Jooneli Trading" />
     <meta name="twitter:image" content="http://jooneli.com/images/logo.png" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Aria+Nova&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
 </head>
 <body>
 
- 
     <header>
-        <!-- Top navbar (visible on large screens only) -->
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom d-none d-md-flex">
-            <div class="container-fluid justify-content-between">
-                <a class="navbar-brand fw-bold text-dark" href="#">
-                    JooneliTrading
-                </a>
-                <ul class="navbar-nav mb-2 mb-sm-0">
-                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Fe</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Pri</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="https://www.jooneli.com/About" target="_blank">Abo</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Cont</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Bottom navbar (collapsible on small devices) -->
-        <nav class="navbar navbar-expand-md navbar-light bg-white ">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold text-dark navbar-brand-centered" href="#">
-                    JooneliTrading
-                </a>
-
-                <!-- Toggler for mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarMenu" aria-controls="navbarMenu"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Collapsible menu -->
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <!-- Menu items shown only on small devices -->
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0 d-md-none">
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Fe</a></li>
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Pri</a></li>
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="https://www.jooneli.com/About" target="_blank">Abo</a></li>
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Cont</a></li>
-                    </ul>
-
-                    <!-- Regular lower menu (always visible) -->
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Features</a></li>
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Pricing</a></li>
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="https://www.jooneli.com/About" target="_blank">About</a></li>
-                        <li class="nav-item mx-2"><a class="nav-link text-dark" href="#">Contact</a></li>
-                    </ul>
-
-                    <!-- Button (hidden on mobile) -->
-                    <button class="btn btn-primary ">Start Free Trial</button>
-                </div>
-            </div>
-        </nav>
+        @await Html.PartialAsync("_Navbar")
     </header>
 
-
+    <main role="main" >
+        @RenderBody()
+    </main>
     
-        <main role="main" >
-            @RenderBody()
-        </main>
-    
-
     @await Html.PartialAsync("_Footer")
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

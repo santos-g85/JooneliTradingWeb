@@ -21,19 +21,6 @@ body {
   margin-bottom: 60px;
 }
 
-@media (min-width: 768px) {
-    .navbar-brand-centered {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .navbar-brand {
-        margin-right: 1rem;
-    }
-}
 
 
 

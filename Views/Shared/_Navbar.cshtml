@@ -1,0 +1,147 @@
+﻿
+@section Styles {
+    <link href="~/css/navbar.css" rel="stylesheet" />
+}
+
+<div class="" style="background-color:#dedede;">
+    <nav class="navbar navbar-expand-sm navbar-light d-none d-md-flex container">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand fw-bold text-dark ms-3" asp-controller="Home">
+                <img src="~/images/logo.jpg" style="max-height:40px;" alt="Jooneli Trading" />
+            </a>
+            <ul class="navbar-nav mb-2 mb-sm-0">
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="https://www.jooneli.com/About" target="_blank">About</a></li>
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="https://www.jooneli.com/Career" target="_blank">Career</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="" style="background-color:#00A86B;">
+    <nav class="navbar navbar-expand-md navbar-light container">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-dark d-block d-md-none" asp-controller="Home">
+                <img src="~/images/logo.jpg" style="max-height:40px;" alt="Jooneli Trading" />
+            </a>
+
+            <div class="d-none d-md-flex flex-grow-1">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" asp-controller="Accounting" style="background-color: transparent !important;">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-calculator me-2 text-primary"></i>
+                                        <div>
+                                            <div class="text-black fw-bold">Accounting System</div>
+                                            <small class="text-muted">Complete financial management</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="Retail" style="background-color: transparent !important;">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shop me-2 text-info"></i>
+                                        <div>
+                                            <div class="text-black fw-bold">Retail</div>
+                                            <small class="text-muted">Data-driven sales insights</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="Restro" style="background-color: transparent !important;">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-cup-hot me-2 text-warning"></i>
+                                        <div>
+                                            <div class="text-black fw-bold">Restro</div>
+                                            <small class="text-muted">Complete restaurant logistics</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center fw-bold" asp-controller="Features">View All Features</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link text-white" asp-controller="Pricing">Pricing</a></li>
+                </ul>
+
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="input-group me-3" style="max-width: 250px;">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-outline-light btn-sm" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                    <a class="btn btn-outline-light btn-sm" href="#">
+                        Login
+                    </a>
+                </div>
+            </div>
+
+            <button class="navbar-toggler bg-white ms-auto d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu" aria-controls="navbarMenu"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+</div>
+
+<div class="collapse navbar-collapse bg-white" id="navbarMenu" style="background-color: white !important;">
+    <div class="container py-3">
+        <ul class="navbar-nav me-auto mb-3 d-md-none">
+            <li class="nav-item mx-2 border-bottom py-2"><a class="nav-link text-dark" href="https://www.jooneli.com/About" target="_blank">About</a></li>
+            <li class="nav-item mx-2 border-bottom py-2"><a class="nav-link text-dark" href="https://www.jooneli.com/Career" target="_blank">Career</a></li>
+        </ul>
+
+        <div class="px-2 mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-secondary" type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <ul class="navbar-nav me-auto mb-3">
+            <li class="nav-item mx-2 border-bottom py-2">
+                <a class="nav-link text-dark fw-bold">Products</a>
+                <ul class="list-unstyled mt-2 ps-3">
+                    <li class="mb-2"><a class="text-dark text-decoration-none" asp-controller="Accounting">• Accounting System</a></li>
+                    <li class="mb-2"><a class="text-dark text-decoration-none" asp-controller="Retail">• Retail</a></li>
+                    <li class="mb-2"><a class="text-dark text-decoration-none" asp-controller="Restro">• Restro</a></li>
+                    <li class="mt-2"><a class="text-primary text-decoration-none fw-bold" asp-controller="Features">View All Features →</a></li>
+                </ul>
+            </li>
+            <li class="nav-item mx-2 border-bottom py-2"><a class="nav-link text-dark" asp-controller="Pricing">Pricing</a></li>
+        </ul>
+
+        <div class="px-2">
+            <a class="btn btn-outline-primary w-100" href="#">
+                <i class="bi bi-person me-1"></i>Login
+            </a>
+        </div>
+
+        <div class="px-2 mt-2">
+            <button class="btn w-100" style="background-color:#00A86B; color: white;">Start Free Trial</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+            var navbarMenu = document.getElementById('navbarMenu');
+            if (navbarMenu.classList.contains('show')) {
+                navbarMenu.classList.remove('show');
+            }
+        }
+    });
+</script>

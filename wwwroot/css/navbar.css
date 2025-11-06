@@ -1,0 +1,31 @@
+﻿
+@media (min-width: 768px) {
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #navbarMenu {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar-brand {
+        margin-right: 1rem;
+    }
+    #navbarMenu .nav-item.border-bottom {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+
+    #navbarMenu .nav-item:last-child.border-bottom {
+        border-bottom: none !important;
+    }
+}
+
+#navbarMenu {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
