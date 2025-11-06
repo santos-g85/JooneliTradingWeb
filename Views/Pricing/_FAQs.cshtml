@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FAQs>
+@{
+    var FAQS = Model;
+}
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold  mb-3">Frequently Asked Questions</h2>
+            <p class="lead text-muted">Get answers to common questions about our pricing and plans</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    @if (FAQS != null && FAQS.Any())
+                    {
+                        var firstfaq = FAQS.First();
+                        var remainingFaqs = FAQS.Skip(1);
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    @firstfaq.Question
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    @firstfaq.Answer
+                                </div>
+                            </div>
+                        </div>
+                        int index = 1;
+                        foreach (var faqs in remainingFaqs)
+                        {
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-@index">
+                                    <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq-@index"
+                                            aria-expanded="false"
+                                            aria-controls="faq-@index">
+                                        @faqs.Question
+                                    </button>
+                                </h2>
+                                <div id="faq-@index" class="accordion-collapse collapse"
+                                     data-bs-parent="#faqAccordion"
+                                     aria-labelledby="heading-@index">
+                                    <div class="accordion-body">
+                                        @faqs.Answer
+                                    </div>
+                                </div>
+                            </div>
+
+                            index++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
