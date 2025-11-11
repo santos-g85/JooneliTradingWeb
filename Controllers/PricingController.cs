@@ -37,6 +37,18 @@ namespace JooneliTrading.Controllers
             return pricingPlans;
        }
 
+
+
+
+
+
+
+
+
+
+
+
+
         private List<FAQs> GetFAQs()
         {
             var faqs = new List<FAQs>
