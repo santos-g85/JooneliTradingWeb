@@ -27,8 +27,8 @@ namespace JooneliTrading.Controllers
             {
                     new Benefits { Title = "Streamlined Operations" },
                     new Benefits { Title = "Cost Savings" },
-                    new Benefits { Title = "Improved Customer Satisfaction" },
                     new Benefits { Title = "Data-Driven Decisions" },
+                    new Benefits { Title = "Improved Customer Satisfaction" },
                     new Benefits { Title = "Scalability" },
                     new Benefits { Title = "Enhanced Collaboration" }
             };
